@@ -23,16 +23,18 @@ export default function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        {isClient && (
-          <Button variant="outline" size="icon">
-            {theme === "system" && (
-              <Monitor className="h-[1.2rem] w-[1.2rem]" />
-            )}
-            {theme === "light" && <Sun className="h-[1.2rem] w-[1.2rem]" />}
-            {theme === "dark" && <Moon className="h-[1.2rem] w-[1.2rem]" />}
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-        )}
+        <Button variant="outline" size="icon">
+          {isClient && theme === "system" && (
+            <Monitor className="h-[1.2rem] w-[1.2rem]" />
+          )}
+          {isClient && theme === "light" && (
+            <Sun className="h-[1.2rem] w-[1.2rem]" />
+          )}
+          {isClient && theme === "dark" && (
+            <Moon className="h-[1.2rem] w-[1.2rem]" />
+          )}
+          <span className="sr-only">Toggle theme</span>
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem

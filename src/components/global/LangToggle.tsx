@@ -23,13 +23,13 @@ export default function LangToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           className="flex items-center gap-2"
-          onClick={() => router.push(`/id-ID/${pathName}`)}
+          onClick={() => router.push(`/id-ID/${pathName.slice(7)}`)}
         >
           Indonesian
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex items-center gap-2"
-          onClick={() => router.push(`/en-US/${pathName}`)}
+          onClick={() => router.push(`/en-US/${pathName.slice(7)}`)}
         >
           English
         </DropdownMenuItem>

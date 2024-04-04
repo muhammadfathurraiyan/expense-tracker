@@ -20,6 +20,8 @@ const config = {
     },
     extend: {
       colors: {
+        gradient1: "hsl(var(--gradient1))",
+        gradient2: "hsl(var(--gradient2))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
