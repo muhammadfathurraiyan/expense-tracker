@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background text- font-sans antialiased",
           bricolageGrotesque.variable
         )}
       >
