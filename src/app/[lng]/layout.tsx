@@ -4,8 +4,9 @@ import "../globals.css";
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/global/theme-provider";
 import Header from "@/components/global/Header";
+import Footer from "@/components/global/Footer";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

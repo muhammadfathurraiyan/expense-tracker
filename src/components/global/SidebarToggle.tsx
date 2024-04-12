@@ -2,13 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LangToggle from "./LangToggle";
 import ModeToggle from "./ModeToggle";
-import {
-  BadgeDollarSign,
-  BadgeInfo,
-  Menu,
-  PartyPopper,
-  Phone,
-} from "lucide-react";
+import { BadgeInfo, Home, Menu, PartyPopper, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function SidebarToggle() {
@@ -26,27 +20,27 @@ export function SidebarToggle() {
             href={""}
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
-            <PartyPopper /> Features
+            <Home size={20} /> Home
           </Link>
           <Link
             href={""}
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
-            <BadgeDollarSign />
-            Pricing
+            <BadgeInfo size={20} /> About
           </Link>
           <Link
             href={""}
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
-            <Phone />
+            <PartyPopper size={20} />
+            Features
+          </Link>
+          <Link
+            href={""}
+            className="hover:text-primary duration-300 flex items-center gap-4"
+          >
+            <Phone size={20} />
             Contact
-          </Link>
-          <Link
-            href={""}
-            className="hover:text-primary duration-300 flex items-center gap-4"
-          >
-            <BadgeInfo /> About
           </Link>
         </nav>
         <div className="space-x-2 absolute bottom-6">
