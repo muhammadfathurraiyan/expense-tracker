@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Jaga Keuangan Anda",
+    "description": "Alat utama Anda untuk mengelola keuangan Anda dengan mudah dan percaya diri.",
+    "cta": "Mulai Sekarang 🚀"
+  },
+  "features": {
+    "title": "Apa yang kami tawarkan?",
+    "description": "Semua yang Anda perlukan untuk mengelola keuangan Anda.",
+    "card": {
+      "one": {
+        "title": "Pelacakan Pengeluaran",
+        "description": "Lacak pengeluaran Anda dengan mudah dan menyeluruh. Pantau setiap transaksi secara detail, mulai dari belanja harian hingga tagihan bulanan, semuanya ada dalam genggaman Anda."
+      },
+      "two": {
+        "title": "Kontrol Keuangan",
+        "description": "Kendalikan keuangan Anda dengan tepat menggunakan fitur kontrol anggaran kami. Tetapkan batas pengeluaran Anda dan pantau saldo keuangan Anda dengan mudah dan efisien."
+      },
+      "three": {
+        "title": "Laporan",
+        "description": "Dapatkan informasi mendalam tentang pola pengeluaran Anda dengan laporan yang jelas dan informatif. Analisis pengeluaran bulanan, tren, dan kategori pengeluaran untuk pengelolaan keuangan yang lebih baik"
+      }
+    }
+  },
+  "about": {
+    "title": "Kenali lebih jauh tentang",
+    "description": "Fokus kami adalah membantu Anda mengendalikan perjalanan keuangan Anda. Dirancang sederhana namun efektif, Kami telah menciptakan platform intuitif yang menyederhanakan proses, memungkinkan Anda fokus dalam mencapai tujuan keuangan Anda. Bersama kami , melacak pengeluaran, memantau kebiasaan belanja, dan tetap sesuai anggaran menjadi mudah. ExpenseTracker adalah rekan setia Anda di jalan menuju kesuksesan finansial. Bergabunglah dengan kami hari ini dan mulailah perjalanan Anda menuju pemberdayaan finansial."
+  },
+  "contact": {
+    "title": "Kenali lebih jauh tentang",
+    "description": {
+      "one": "Ada pertanyaan atau masukan? Jangan ragu untuk menghubungi kami melalui email📧 di",
+      "two": "atau dm kami pada X di",
+      "three": ". Kami tunggu kalian, terima kasih."
+    }
+  }
+}

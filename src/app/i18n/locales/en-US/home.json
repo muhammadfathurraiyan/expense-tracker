@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Keep Your Finances in Check.",
+    "description": "Your ultimate tool for managing your finances with ease and confidence.",
+    "cta": "Get Started 🚀"
+  },
+  "features": {
+    "title": "What do we offer?",
+    "description": "Everything you need to manage your finances.",
+    "card": {
+      "one": {
+        "title": "Tracking Expense",
+        "description": "Track your expenses easily and thoroughly. Monitor every transaction in detail, from daily shopping to monthly bills, all in the palm of your hand."
+      },
+      "two": {
+        "title": "Budget Control",
+        "description": "Take proper control of your finances precisely using our budget control feature. Set your spending limits and monitor your financial balance easily and efficiently."
+      },
+      "three": {
+        "title": "Reports",
+        "description": "Get deep insight into your spending patterns with clear and informative reports. Analyze monthly expenses, trends and spending categories for better financial management"
+      }
+    }
+  },
+  "about": {
+    "title": "Get to know more about",
+    "description": "Our focus is to help you in taking control of your financial journey. Designed to be simple yet effective, We've created an intuitive platform that streamlines the process, letting you to focus on reaching your financial goals. With us, tracking expenses, monitoring spending habits, and staying within budget becomes effortless. ExpenseTracker is your faithful companion on the path to financial success. Join us today and start your journey towards financial empowerment."
+  },
+  "contact": {
+    "title": "Get to know more about",
+    "description": {
+      "one": "Have questions or feedback? Feel free to reach out to us via email📧 at ",
+      "two": "or dm us on X at ",
+      "three": ". We're waiting for you guys, Thanks."
+    }
+  }
+}

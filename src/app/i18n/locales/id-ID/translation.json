@@ -1,3 +1,23 @@
 {
-  "title": "beranda"
+  "header": {
+    "nav": {
+      "home": "Beranda",
+      "features": "Fitur",
+      "about": "Tentang",
+      "contact": "Kontak"
+    }
+  },
+  "mode": {
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Sistem"
+  },
+  "lang": {
+    "eng": "Inggris",
+    "ind": "Indonesia"
+  },
+  "footer": {
+    "title": "Situs di desain dengan 💙 oleh tamir & raiyan.",
+    "footer": "2024 ExpenseTracker. Hak cipta dilindungi"
+  }
 }

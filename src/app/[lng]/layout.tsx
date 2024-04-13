@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/global/theme-provider";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import { useTranslation } from "../i18n";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -22,13 +23,14 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { lng },
 }: Readonly<{
   children: React.ReactNode;
   params: { lng: string };
 }>) {
+  const { t } = await useTranslation(lng);
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <body
@@ -43,9 +45,29 @@ export default function RootLayout({
           enableSystem
           // disableTransitionOnChange
         >
-          <Header />
+          <Header
+            content={{
+              nav: {
+                home: t("header.nav.home"),
+                features: t("header.nav.features"),
+                about: t("header.nav.about"),
+                contact: t("header.nav.contact"),
+              },
+              mode: {
+                light: t("mode.light"),
+                dark: t("mode.dark"),
+                system: t("mode.system"),
+              },
+              lang: {
+                eng: t("lang.eng"),
+                ind: t("lang.ind"),
+              },
+            }}
+          />
           {children}
-          <Footer />
+          <Footer
+            content={{ title: t("footer.title"), footer: t("footer.footer") }}
+          />
         </ThemeProvider>
       </body>
     </html>

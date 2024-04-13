@@ -12,7 +12,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useEffect, useState } from "react";
 
-export default function ModeToggle() {
+type TContent = {
+  light: string;
+  dark: string;
+  system: string;
+};
+
+export default function ModeToggle({ content }: { content: TContent }) {
   const { theme, setTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
 
@@ -42,21 +48,21 @@ export default function ModeToggle() {
           onClick={() => setTheme("light")}
         >
           <Sun className="h-[1.2rem] w-[1.2rem]" />
-          Light
+          {content.light}
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex items-center gap-2"
           onClick={() => setTheme("dark")}
         >
           <Moon className="h-[1.2rem] w-[1.2rem]" />
-          Dark
+          {content.dark}
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex items-center gap-2"
           onClick={() => setTheme("system")}
         >
           <Monitor className="h-[1.2rem] w-[1.2rem]" />
-          System
+          {content.system}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

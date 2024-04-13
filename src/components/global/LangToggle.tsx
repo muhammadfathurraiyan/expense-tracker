@@ -9,7 +9,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { usePathname, useRouter } from "next/navigation";
 
-export default function LangToggle() {
+type TContent = {
+  eng: string;
+  ind: string;
+};
+
+export default function LangToggle({ content }: { content: TContent }) {
   const router = useRouter();
   const pathName = usePathname();
   return (
@@ -25,13 +30,13 @@ export default function LangToggle() {
           className="flex items-center gap-2"
           onClick={() => router.push(`/id-ID/${pathName.slice(7)}`)}
         >
-          Indonesian
+          {content.ind}
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex items-center gap-2"
           onClick={() => router.push(`/en-US/${pathName.slice(7)}`)}
         >
-          English
+          {content.eng}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

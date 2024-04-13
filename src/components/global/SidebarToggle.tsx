@@ -5,7 +5,25 @@ import ModeToggle from "./ModeToggle";
 import { BadgeInfo, Home, Menu, PartyPopper, Phone } from "lucide-react";
 import Link from "next/link";
 
-export function SidebarToggle() {
+type TContent = {
+  nav: {
+    home: string;
+    features: string;
+    about: string;
+    contact: string;
+  };
+  mode: {
+    light: string;
+    dark: string;
+    system: string;
+  };
+  lang: {
+    eng: string;
+    ind: string;
+  };
+};
+
+export function SidebarToggle({ content }: { content: TContent }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -17,35 +35,35 @@ export function SidebarToggle() {
         <h3 className="text-gradient">ExpenseTracker</h3>
         <nav className="flex flex-col gap-4 mt-6">
           <Link
-            href={""}
+            href="#home"
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
-            <Home size={20} /> Home
+            <Home size={20} /> {content.nav.home}
           </Link>
           <Link
-            href={""}
-            className="hover:text-primary duration-300 flex items-center gap-4"
-          >
-            <BadgeInfo size={20} /> About
-          </Link>
-          <Link
-            href={""}
+            href="#features"
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
             <PartyPopper size={20} />
-            Features
+            {content.nav.features}
           </Link>
           <Link
-            href={""}
+            href="#about"
+            className="hover:text-primary duration-300 flex items-center gap-4"
+          >
+            <BadgeInfo size={20} /> {content.nav.about}
+          </Link>
+          <Link
+            href="#contact"
             className="hover:text-primary duration-300 flex items-center gap-4"
           >
             <Phone size={20} />
-            Contact
+            {content.nav.contact}
           </Link>
         </nav>
         <div className="space-x-2 absolute bottom-6">
-          <LangToggle />
-          <ModeToggle />
+          <LangToggle content={content.lang} />
+          <ModeToggle content={content.mode} />
         </div>
       </SheetContent>
     </Sheet>

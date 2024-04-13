@@ -1,3 +1,23 @@
 {
-  "title": "home"
+  "header": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "mode": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "lang": {
+    "eng": "English",
+    "ind": "Indonesian"
+  },
+  "footer": {
+    "title": "Site design with 💙 by tamir & raiyan.",
+    "footer": "2024 ExpenseTracker. All right reserved."
+  }
 }
