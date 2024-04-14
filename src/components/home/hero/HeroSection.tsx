@@ -1,14 +1,19 @@
-import { Button } from "../../ui/button";
+import Link from "next/link";
+import { Button, buttonVariants } from "../../ui/button";
 import Illustration from "./Illustration";
+
+type TContent = {
+  title: string;
+  description: string;
+  cta: string;
+};
 
 export default function HeroSection({
   content,
+  lng,
 }: {
-  content: {
-    title: string;
-    description: string;
-    cta: string;
-  };
+  content: TContent;
+  lng: string;
 }) {
   return (
     <section
@@ -19,9 +24,11 @@ export default function HeroSection({
         <span className="text-gradient">ExpenseTracker</span>, {content.title}
       </h1>
       <p className="text-lg text-center">{content.description}</p>
-      <Button size="lg" className="mx-auto text-lg">
-        {content.cta}
-      </Button>
+      <Link href={`/${lng}/auth`}>
+        <Button size="lg" className="mx-auto text-lg">
+          {content.cta}
+        </Button>
+      </Link>
       <div className="w-1/2 max-md:w-3/4 mx-auto mt-2">
         <Illustration />
       </div>

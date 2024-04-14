@@ -5,6 +5,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { usePathname, useRouter } from "next/navigation";
@@ -12,6 +14,7 @@ import { usePathname, useRouter } from "next/navigation";
 type TContent = {
   eng: string;
   ind: string;
+  label: string;
 };
 
 export default function LangToggle({ content }: { content: TContent }) {
@@ -26,6 +29,8 @@ export default function LangToggle({ content }: { content: TContent }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
+        <DropdownMenuLabel>{content.label}</DropdownMenuLabel>
+        <DropdownMenuSeparator />
         <DropdownMenuItem
           className="flex items-center gap-2"
           onClick={() => router.push(`/id-ID/${pathName.slice(7)}`)}

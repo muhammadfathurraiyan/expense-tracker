@@ -9,6 +9,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { useEffect, useState } from "react";
 
@@ -16,6 +18,7 @@ type TContent = {
   light: string;
   dark: string;
   system: string;
+  label: string;
 };
 
 export default function ModeToggle({ content }: { content: TContent }) {
@@ -43,6 +46,8 @@ export default function ModeToggle({ content }: { content: TContent }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
+        <DropdownMenuLabel>{content.label}</DropdownMenuLabel>
+        <DropdownMenuSeparator />
         <DropdownMenuItem
           className="flex items-center gap-2"
           onClick={() => setTheme("light")}

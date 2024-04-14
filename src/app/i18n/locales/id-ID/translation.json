@@ -10,11 +10,13 @@
   "mode": {
     "light": "Terang",
     "dark": "Gelap",
-    "system": "Sistem"
+    "system": "Sistem",
+    "label": "Pilih tema"
   },
   "lang": {
     "eng": "Inggris",
-    "ind": "Indonesia"
+    "ind": "Indonesia",
+    "label": "Pilih bahasa"
   },
   "footer": {
     "title": "Situs di desain dengan 💙 oleh tamir & raiyan.",

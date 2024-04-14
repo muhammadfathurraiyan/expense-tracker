@@ -10,11 +10,13 @@
   "mode": {
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "System",
+    "label": "Choose theme"
   },
   "lang": {
     "eng": "English",
-    "ind": "Indonesian"
+    "ind": "Indonesian",
+    "label": "Choose language"
   },
   "footer": {
     "title": "Site design with 💙 by tamir & raiyan.",

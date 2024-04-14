@@ -14,6 +14,7 @@ export default async function Page({ params }: { params: { lng: string } }) {
           description: t("home.description"),
           cta: t("home.cta"),
         }}
+        lng={params.lng}
       />
       <Features
         content={{

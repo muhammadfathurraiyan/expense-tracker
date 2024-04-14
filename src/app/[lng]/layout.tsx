@@ -57,12 +57,15 @@ export default async function RootLayout({
                 light: t("mode.light"),
                 dark: t("mode.dark"),
                 system: t("mode.system"),
+                label: t("mode.label"),
               },
               lang: {
                 eng: t("lang.eng"),
                 ind: t("lang.ind"),
+                label: t("lang.label"),
               },
             }}
+            lng={lng}
           />
           {children}
           <Footer

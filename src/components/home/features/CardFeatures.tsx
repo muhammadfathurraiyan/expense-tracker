@@ -23,11 +23,11 @@ export function CardFeatures({
 }) {
   return (
     <Card className="w-[350px] max-md:w-full group hover:border-primary duration-300">
-      <CardHeader className="text-default group-hover:text-primary duration-300">
+      <CardHeader className="group-hover:text-primary duration-300">
         <Icon size={32} />
       </CardHeader>
       <CardContent>
-        <CardTitle className="text-default">{content.title}</CardTitle>
+        <CardTitle className="group-hover:text-primary duration-300">{content.title}</CardTitle>
         <CardDescription>{content.description}</CardDescription>
       </CardContent>
     </Card>
