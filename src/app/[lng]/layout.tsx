@@ -65,7 +65,6 @@ export default async function RootLayout({
                 label: t("lang.label"),
               },
             }}
-            lng={lng}
           />
           {children}
           <Footer

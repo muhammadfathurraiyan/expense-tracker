@@ -1,8 +1,14 @@
 import { useTranslation } from "@/app/i18n";
 import AuthForm from "@/components/auth/AuthForm";
+import { redirect } from "next/navigation";
 
 export default async function Page({ params }: { params: { lng: string } }) {
   const { t } = await useTranslation(params.lng, "auth");
+  const authenticated = false;
+  const session = { username: "user" };
+  if (authenticated) {
+    redirect(`/${params.lng}/${session.username}`);
+  }
   return (
     <main className="md:container min-h-screen flex items-center justify-center px-4 space-y-24 py-24">
       <AuthForm

@@ -30,9 +30,11 @@ type TContent = {
 export function SidebarToggle({
   content,
   lng,
+  username
 }: {
   content: TContent;
   lng: string;
+  username: string
 }) {
   const pathname = usePathname();
   return (
