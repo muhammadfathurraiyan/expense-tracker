@@ -5,7 +5,17 @@
       "features": "Fitur",
       "about": "Tentang",
       "contact": "Kontak"
+    },
+    "nav2": {
+      "home": "Beranda",
+      "overview": "Ringkasan",
+      "analytics": "Analisis",
+      "settings": "Pengaturan"
     }
+  },
+  "profile": {
+    "settings": "Pengaturan",
+    "profile": "Profil"
   },
   "mode": {
     "light": "Terang",

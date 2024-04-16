@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GoogleIcon from "./GoogleIcon";
+import { Label } from "../ui/label";
 
 type TContent = {
   login: {
@@ -47,21 +48,25 @@ export default function AuthForm({ content }: { content: TContent }) {
       <TabsContent value="login">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center">
-              {content.login.title}
-            </CardTitle>
+            <CardTitle className="text-center">{content.login.title}</CardTitle>
             <CardDescription className="text-center">
               {content.login.description}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Input id="email" placeholder={content.login.placeholder.email} />
-              <Input
-                id="password"
-                type="password"
-                placeholder={content.login.placeholder.password}
-              />
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  placeholder={content.login.placeholder.email}
+                />
+              </div>
+              <div>
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" name="password" type="password" />
+              </div>
               <Button className="w-full">Login</Button>
             </div>
             <div className="relative">
@@ -109,19 +114,26 @@ export default function AuthForm({ content }: { content: TContent }) {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Input
-                id="name"
-                placeholder={content.register.placeholder.name}
-              />
-              <Input
-                id="email"
-                placeholder={content.register.placeholder.email}
-              />
-              <Input
-                id="password"
-                type="password"
-                placeholder={content.register.placeholder.password}
-              />
+              <div>
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  placeholder={content.register.placeholder.name}
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  placeholder={content.register.placeholder.email}
+                />
+              </div>
+              <div>
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" name="password" type="password" />
+              </div>
               <Button className="w-full">Register</Button>
             </div>
             <div className="relative">

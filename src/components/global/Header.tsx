@@ -15,6 +15,16 @@ type TContent = {
     about: string;
     contact: string;
   };
+  nav2: {
+    home: string;
+    overview: string;
+    analytics: string;
+    settings: string;
+  };
+  profile: {
+    settings: string;
+    profile: string;
+  };
   mode: {
     light: string;
     dark: string;
@@ -78,7 +88,7 @@ export default function Header({ content }: { content: TContent }) {
               pathname === `/${lng}/${username}` && "text-primary"
             } hover:text-primary duration-300`}
           >
-            Home
+            {content.nav2.home}
           </Link>
           <Link
             href={`/${lng}/${username}/overview`}
@@ -86,7 +96,7 @@ export default function Header({ content }: { content: TContent }) {
               pathname === `/${lng}/${username}/overview` && "text-primary"
             } hover:text-primary duration-300`}
           >
-            Overview
+            {content.nav2.overview}
           </Link>
           <Link
             href={`/${lng}/${username}/analytics`}
@@ -94,7 +104,7 @@ export default function Header({ content }: { content: TContent }) {
               pathname === `/${lng}/${username}/analytics` && "text-primary"
             } hover:text-primary duration-300`}
           >
-            Analytics
+            {content.nav2.analytics}
           </Link>
           <Link
             href={`/${lng}/${username}/settings`}
@@ -102,11 +112,11 @@ export default function Header({ content }: { content: TContent }) {
               pathname === `/${lng}/${username}/setting` && "text-primary"
             } hover:text-primary duration-300`}
           >
-            Settings
+            {content.nav2.settings}
           </Link>
         </nav>
       )}
-      <div className="flex items-center gap-2 max-md:hidden">
+      <div className="flex items-center gap-2">
         {!authenticated && (
           <Link
             href={`/${lng}/auth`}
@@ -115,12 +125,14 @@ export default function Header({ content }: { content: TContent }) {
             Login
           </Link>
         )}
-        <ModeToggle content={content.mode} />
-        <LangToggle content={content.lang} />
-        {authenticated && <UserToggle />}
-      </div>
-      <div className="md:hidden">
-        <SidebarToggle lng={lng} username={username} content={content} />
+        <div className="flex items-center gap-2 max-md:hidden">
+          <ModeToggle content={content.mode} />
+          <LangToggle content={content.lang} />
+        </div>
+        {authenticated && <UserToggle content={content.profile} />}
+        <div className="md:hidden">
+          <SidebarToggle lng={lng} username={username} content={content} />
+        </div>
       </div>
     </header>
   );

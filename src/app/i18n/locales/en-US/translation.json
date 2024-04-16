@@ -5,7 +5,17 @@
       "features": "Features",
       "about": "About",
       "contact": "Contact"
+    },
+    "nav2": {
+      "home": "Home",
+      "overview": "Overview",
+      "analytics": "Analytics",
+      "settings": "Settings"
     }
+  },
+  "profile": {
+    "settings": "Settings",
+    "profile": "Profile"
   },
   "mode": {
     "light": "Light",

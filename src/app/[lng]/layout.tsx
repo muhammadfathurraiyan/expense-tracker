@@ -53,6 +53,16 @@ export default async function RootLayout({
                 about: t("header.nav.about"),
                 contact: t("header.nav.contact"),
               },
+              nav2: {
+                home: t("header.nav2.home"),
+                overview: t("header.nav2.overview"),
+                analytics: t("header.nav2.analytics"),
+                settings: t("header.nav2.settings"),
+              },
+              profile: {
+                settings: t("profile.settings"),
+                profile: t("profile.profile"),
+              },
               mode: {
                 light: t("mode.light"),
                 dark: t("mode.dark"),
