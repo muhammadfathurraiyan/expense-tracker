@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { TrendingUp } from "lucide-react";
+import { FormDialog } from "./FormDialog";
 
 export default function Income() {
   return (
@@ -24,7 +25,7 @@ export default function Income() {
           </CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button>Create New Income</Button>
+          <FormDialog />
         </CardFooter>
       </Card>
       <Card>

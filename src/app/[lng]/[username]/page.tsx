@@ -1,4 +1,4 @@
-import Form from "@/components/user/home/Form";
+import TabExpenseIncome from "@/components/user/home/TabExpenseIncome";
 export default function page({
   params,
 }: {
@@ -7,7 +7,7 @@ export default function page({
   return (
     <main className="md:container min-h-screen px-4 py-4 space-y-4">
       <h2>Beranda</h2>
-      <Form />
+      <TabExpenseIncome />
     </main>
   );
 }

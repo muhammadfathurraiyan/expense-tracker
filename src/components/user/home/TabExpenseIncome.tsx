@@ -30,7 +30,7 @@ type TContent = {
   };
 };
 
-export default function Form() {
+export default function TabExpenseIncome() {
   return (
     <Tabs defaultValue="expense" className="space-y-4">
       <TabsList className="grid w-fit grid-cols-2">

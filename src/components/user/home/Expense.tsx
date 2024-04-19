@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { TrendingDown } from "lucide-react";
+import { FormDialog } from "./FormDialog";
 
 export default function Expense() {
   return (
@@ -24,7 +25,7 @@ export default function Expense() {
           </CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button>Create New Expense</Button>
+          <FormDialog />
         </CardFooter>
       </Card>
       <Card>
